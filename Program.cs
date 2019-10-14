@@ -12,8 +12,15 @@ using System.Diagnostics;
 
 namespace CSCI._251_Proj2
 {
+    /*
+     * Main Program, handles command line arguments, prints help, and delegates
+     * to logic class.
+     */
     class Program
     {
+        /*
+         * Main function.
+         */
         static void Main(string[] args)
         {
             Stopwatch sw = new Stopwatch();
@@ -25,7 +32,8 @@ namespace CSCI._251_Proj2
             else if (args.Length == 1)
             {
                 sw.Start();
-                var numGen = new NumGen(int.Parse(args[0]));
+                Console.WriteLine("BitLength: " + args[0] + " bits");
+                var numGen = new NumGen(int.Parse(args[0]) / 8);
                 numGen.generatePrimes();
                 sw.Stop();
                 Console.WriteLine("Time to Generate: {0}:{1}:{2}.{3}",
@@ -37,7 +45,8 @@ namespace CSCI._251_Proj2
             else if (args.Length == 2)
             {
                 sw.Start();
-                var numGen = new NumGen(int.Parse(args[0]), int.Parse(args[1]));
+                Console.WriteLine("BitLength: " + args[0] + " bits");
+                var numGen = new NumGen(int.Parse(args[0]) / 8, int.Parse(args[1]));
                 numGen.generatePrimes();
                 sw.Stop();
                 Console.WriteLine("Time to Generate: {0:00}:{1:00}:{2:00}.{3:00}",
@@ -52,6 +61,9 @@ namespace CSCI._251_Proj2
             }
         }
 
+        /*
+         * Help message.
+         */
         static void printHelp()
         {
             Console.WriteLine("dotnet run PrimeGen <bits> <count=1>");

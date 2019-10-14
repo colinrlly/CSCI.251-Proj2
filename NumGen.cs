@@ -5,6 +5,10 @@ using System.Numerics;
 using System.Threading;
 
 namespace Generators {
+    /*
+     * Main logic for the PrimeGen program. Generates prime numbers and prints them to the
+     * command line.
+     */
     public class NumGen {
         private static RNGCryptoServiceProvider rngCsp = new RNGCryptoServiceProvider();
         private int bytes;
@@ -12,16 +16,20 @@ namespace Generators {
         private int primesGenerated;
         private object LockObject = new object();
 
-
+        /*
+         * Constructor for the NumGen class.
+         */
         public NumGen(int bytes, int count = 1) {
             this.bytes = bytes;
             this.count = count;
             this.primesGenerated = 0;
         }
 
+        /*
+         * Spawns threads to generate prime numbers. Stops spawning when the
+         * predefined count of prime numbers has been printed.
+         */
         public void generatePrimes() {
-            BigInteger[] bigInts = new BigInteger[this.count];
-
             while (true) {
                 lock(this.LockObject) {
                     if (this.primesGenerated == this.count) {
@@ -29,23 +37,34 @@ namespace Generators {
                     }
                 }
 
-                new Thread(generatePrime).Start();
+                new Thread(generatePosiblePrime).Start();
             }
         }
 
-        private void generatePrime() {
+        /*
+        * Generates a single number. If that number is prime, prints it to the console.
+        */
+        private void generatePosiblePrime() {
             var bi = this.generateRandomBigInt();
 
             if (bi.IsProbablyPrime()) {
                 lock(this.LockObject) {
                     if (this.primesGenerated < this.count) {
                         this.primesGenerated++;
-                        Console.WriteLine(this.primesGenerated.ToString() + ": " + bi + "\n");
+                        Console.WriteLine(this.primesGenerated.ToString() + ": " + bi);
+
+                        // Used for formatting.
+                        if (this.primesGenerated != this.count) {
+                            Console.WriteLine();
+                        }
                     }
                 }
             }
         }
 
+        /*
+         * Generate a single bigInteger.
+         */
         private BigInteger generateRandomBigInt() {
             byte[] randomNumber = new byte[this.bytes];
             rngCsp.GetBytes(randomNumber);
