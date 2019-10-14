@@ -7,9 +7,8 @@
 */
 
 using System;
-using System.Numerics;
-using Extensions;
 using Generators;
+using System.Diagnostics;
 
 namespace CSCI._251_Proj2
 {
@@ -17,22 +16,35 @@ namespace CSCI._251_Proj2
     {
         static void Main(string[] args)
         {
+            Stopwatch sw = new Stopwatch();
+
             if (args.Length < 1)
             {
                 printHelp();
             }
             else if (args.Length == 1)
             {
-                Console.WriteLine(args[0]);
+                sw.Start();
                 var numGen = new NumGen(int.Parse(args[0]));
-                var bi = new BigInteger(numGen.generateRandomNum(), true);
-                Console.WriteLine(bi);
-                Console.WriteLine(bi.IsProbablyPrime());
+                numGen.generatePrimes();
+                sw.Stop();
+                Console.WriteLine("Time to Generate: {0}:{1}:{2}.{3}",
+                    sw.Elapsed.Hours,
+                    sw.Elapsed.Minutes,
+                    sw.Elapsed.Seconds,
+                    sw.Elapsed.Ticks);
             }
             else if (args.Length == 2)
             {
-                Console.WriteLine(args[0]);
-                Console.WriteLine(args[1]);
+                sw.Start();
+                var numGen = new NumGen(int.Parse(args[0]), int.Parse(args[1]));
+                numGen.generatePrimes();
+                sw.Stop();
+                Console.WriteLine("Time to Generate: {0:00}:{1:00}:{2:00}.{3:00}",
+                    sw.Elapsed.Hours,
+                    sw.Elapsed.Minutes,
+                    sw.Elapsed.Seconds,
+                    sw.Elapsed.Ticks);
             }
             else
             {
