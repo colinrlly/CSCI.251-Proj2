@@ -1,0 +1,11 @@
+C:\Users\colin\projects\rit\CSCI.251-Proj2\bin\Debug\netcoreapp3.0\PrimeGen.exe
+C:\Users\colin\projects\rit\CSCI.251-Proj2\bin\Debug\netcoreapp3.0\PrimeGen.deps.json
+C:\Users\colin\projects\rit\CSCI.251-Proj2\bin\Debug\netcoreapp3.0\PrimeGen.runtimeconfig.json
+C:\Users\colin\projects\rit\CSCI.251-Proj2\bin\Debug\netcoreapp3.0\PrimeGen.runtimeconfig.dev.json
+C:\Users\colin\projects\rit\CSCI.251-Proj2\bin\Debug\netcoreapp3.0\PrimeGen.dll
+C:\Users\colin\projects\rit\CSCI.251-Proj2\bin\Debug\netcoreapp3.0\PrimeGen.pdb
+C:\Users\colin\projects\rit\CSCI.251-Proj2\obj\Debug\netcoreapp3.0\PrimeGen.csprojAssemblyReference.cache
+C:\Users\colin\projects\rit\CSCI.251-Proj2\obj\Debug\netcoreapp3.0\PrimeGen.AssemblyInfoInputs.cache
+C:\Users\colin\projects\rit\CSCI.251-Proj2\obj\Debug\netcoreapp3.0\PrimeGen.AssemblyInfo.cs
+C:\Users\colin\projects\rit\CSCI.251-Proj2\obj\Debug\netcoreapp3.0\PrimeGen.dll
+C:\Users\colin\projects\rit\CSCI.251-Proj2\obj\Debug\netcoreapp3.0\PrimeGen.pdb

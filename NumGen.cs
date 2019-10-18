@@ -1,3 +1,11 @@
+/*
+ * Colin Reilly
+ * Project 2
+ * CSCI.251.03 - Conc of Par and Dist Systems
+ * Rochester Institute of Technology
+ * 10/16/19
+*/
+
 using System;
 using System.Security.Cryptography;
 using Extensions;

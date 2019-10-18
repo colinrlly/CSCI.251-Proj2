@@ -13,9 +13,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\colin\\projects\\rit\\CSCI.251-Proj2\\CSCI.251-Proj2.csproj",
-      "projectName": "CSCI.251-Proj2",
-      "projectPath": "C:\\Users\\colin\\projects\\rit\\CSCI.251-Proj2\\CSCI.251-Proj2.csproj",
+      "projectUniqueName": "C:\\Users\\colin\\projects\\rit\\CSCI.251-Proj2\\PrimeGen.csproj",
+      "projectName": "PrimeGen",
+      "projectPath": "C:\\Users\\colin\\projects\\rit\\CSCI.251-Proj2\\PrimeGen.csproj",
       "packagesPath": "C:\\Users\\colin\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\colin\\projects\\rit\\CSCI.251-Proj2\\obj\\",
       "projectStyle": "PackageReference",

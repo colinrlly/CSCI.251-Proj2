@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <RootNamespace>CSCI._251_Proj2</RootNamespace>
+    <RootNamespace>PrimeGen</RootNamespace>
   </PropertyGroup>
 
 </Project>
