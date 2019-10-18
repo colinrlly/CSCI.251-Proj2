@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/PrimeGen/bin/Debug/netcoreapp3.0/PrimeGen.dll",
+            "program": "${workspaceFolder}/bin/Debug/netcoreapp3.0/CSCI.251-Proj2.dll",
             "args": [],
-            "cwd": "${workspaceFolder}/PrimeGen",
+            "cwd": "${workspaceFolder}",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
